@@ -4,7 +4,7 @@ import "./index.css";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./Components/Home/Home";
-// import KnowUs from "./Components/KnowUs/KnowUs";
+import KnowUs from "./Components/KnowUs/KnowUs";
 import "./Components/KnowUs/KnowUs.css";
 import AskDoubt from "./Components/AskDoubt/AskDoubt";
 import "./Components/AskDoubt/AskDoubt.css";
@@ -20,7 +20,7 @@ root.render(
       <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="/aboutus" element={<KnowUs />} /> */}
+        <Route path="/aboutus" element={<KnowUs />} />
         <Route path="/askyourdoubt" element={<AskDoubt />} />
         <Route path="/findcareer" element={<Career/>}/>
       </Routes>

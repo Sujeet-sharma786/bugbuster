@@ -1,11 +1,11 @@
 import React from "react";
 import myPic from "../../Images/pic1.jpg";
 import sumitsPic from "../../Images/pic2.jpg";
-import Typed from "react-typed";
+// import { ReactTyped } from "react-typed"
 import { plus } from "react-icons";
 import { useNavigate } from "react-router-dom";
 
-var typed = new Typed(".auto-input", {});
+// var typed = new ReactTyped(".auto-input", {});
 
 const KnowUs = () => {
   const navigate = useNavigate();
@@ -39,13 +39,14 @@ const KnowUs = () => {
         <div className="introduction">
           <h1>
             Hey Guys!&nbsp;
-            <Typed
-              strings={[" we are Web-Developer.", " and we are programmer."]}
-              typeSpeed={50}
-              backSpeed={50}
-              loop
-              className="auto-input"
-            />
+            <div >
+              {/* strings={["We are Web Developers.", "And we are programmers."]} */}
+              <h3>"We are Web Developers..."</h3>
+              {/* typeSpeed={50}
+              backSpeed={50} */}
+              {/* loop
+              className="auto-input" */}
+            </div>
           </h1>
           <p>
             Hello guys! This website is developed for raising the skills of
