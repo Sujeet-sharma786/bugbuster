@@ -27,7 +27,7 @@ const AskDoubt = () => {
   const [answerDiv, setAnswerDiv] = useState(false);
 
   const BASE_URL = process.env.REACT_APP_BASE_URL;
-  console.log("BAse URL:",BASE_URL);
+
 
   const getDoubtsDetails = async () => {
     try {
@@ -119,7 +119,7 @@ const AskDoubt = () => {
       // console.log(my_ans)
       setAnswerTheQuestion(my_ans);
       // console.log(my_ans);
-      console.log("sujeet", ansTheQuestion.id)
+      // console.log("sujeet", ansTheQuestion.id)
       setbuttonActionID(answer_id);
 
     }
@@ -168,24 +168,11 @@ const AskDoubt = () => {
             />
 
           </div>
-
-
-
-
-
-
-
-
-
-
-
           {
             (popUpDoubt) ?
               <div>
                 <DoubtPrompt setPopUpDoubt={setPopUpDoubt} />
               </div> : <></>
-
-
           }
           {
             (popUpAns) ?
@@ -196,10 +183,6 @@ const AskDoubt = () => {
               </div> : <></>
 
           }
-
-
-
-
           {/* </div> */}
           <div className="posted-questions-bg">
             <div className="doubts-list">
@@ -231,7 +214,7 @@ const AskDoubt = () => {
                     }
 
 
-                    {console.log(ansTheQuestion.id)}
+                    {/* {console.log(ansTheQuestion.id)} */}
 
                     {
 
@@ -257,7 +240,7 @@ const AskDoubt = () => {
 
                     }
                     {
-                      console.log(ansTheQuestion.id)
+                      // console.log(ansTheQuestion.id)
                     }
 
 
