@@ -11,6 +11,7 @@ import "./Components/AskDoubt/AskDoubt.css";
 import Career from"./Components/Career/career"
 import Navbar from "./Components/Navbar/navbar"
 import Footer from "./Components/Footer/footer"
+import Admin from "./Components/Admin/Admin.js";
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -23,6 +24,7 @@ root.render(
         <Route path="/aboutus" element={<KnowUs />} />
         <Route path="/askyourdoubt" element={<AskDoubt />} />
         <Route path="/findcareer" element={<Career/>}/>
+        <Route path="/admin" element={<Admin/>}/>
       </Routes>
       {/* <Footer /> */}
     </Router>

@@ -16,7 +16,7 @@
   
     position: fixed;
     /* z-index: 1; */
-    margin-inline-start: 300px;
+    margin-inline-start: 20%;
     padding: 20px;
     margin-block-start: -200px;
   }

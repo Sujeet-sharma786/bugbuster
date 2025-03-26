@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import DoubtPrompt from "./doubtPostPrompt/doubtPrompt";
+import DoubtPrompt from "./doubtPostPrompt/doubtPrompt.js";
 
-import AnsPrompt from "./doubtPostPrompt/ansPrompt";
+import AnsPrompt from "./doubtPostPrompt/ansPrompt.js";
 import doubtImg from "./doubt_image_processed.png"
 
 
@@ -99,14 +99,13 @@ const AskDoubt = () => {
 
 
 
-  const handleAnswerButtonClick = (id) => {
-    setAns_id(id);
-    // enableAnswerInput(id);
-    setPopUpAns(!popUpAns);
+  // const handleAnswerButtonClick = (id) => {
+  //   setAns_id(id);
+  //   setPopUpAns(!popUpAns);
 
 
 
-  };
+  // };
 
 
 
@@ -134,7 +133,7 @@ const AskDoubt = () => {
 
 
   // enableAnswerInput();
-
+  const value = localStorage.getItem('admin');
   return (
     <section className="askdoubt-section">
       <div className="flex-container">
@@ -151,7 +150,7 @@ const AskDoubt = () => {
             <h1>Q&A</h1>
             <h1>Q&A</h1>
           </div> */}
-          <img src={doubtImg} alt="logo"  style={{height:"230px",width:"230px",margin:"auto",marginBlockStart:"50px"}}/>
+          <img src={doubtImg} alt="logo" style={{ height: "230px", width: "230px", margin: "auto", marginBlockStart: "50px" }} />
 
 
 
@@ -236,12 +235,32 @@ const AskDoubt = () => {
                         >
                           Discussion
                         </button>
-
+                      
 
                     }
-                    {
-                      // console.log(ansTheQuestion.id)
-                    }
+                    
+                  {
+                    value ? 
+                    <button
+                    style={{ margin: "10px", width: "80px", height: "30px", borderRadius: "15px", padding: "5px", border: "none", backgroundColor: "#242F42", color: "white" }}
+                          
+                     onClick={(e)=>setPopUpAns(!popUpAns)}>Answer</button>
+
+                    :
+                    ""
+                  }
+                  {
+                    value?
+                    <button
+                    style={{ margin: "10px", width: "80px", height: "30px", borderRadius: "15px", padding: "5px", border: "none", backgroundColor: "#242F42", color: "white" }}
+                          
+                     >Delete</button>
+                     :
+                     ""
+                  }
+                   
+                   
+                    
 
 
 

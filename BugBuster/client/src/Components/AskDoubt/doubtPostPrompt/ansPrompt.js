@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
-
+import './ansPrompt.css'
 const AnsPrompt = (props) => {
 
 
     const [ans,setAns] = useState("");
     const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-    // Ad  Answer API 
+    // Add  Answer API 
     const AddAnswer = async () => {
         try {
           // Construct the request body with the answer data
@@ -27,6 +27,7 @@ const AnsPrompt = (props) => {
     
           if (response.status === 200) {
             console.log("Successfully added the answer");
+            alert("answer added successfully");
             // Clear the answer input field or perform any other necessary actions
             setAns("");
           } else {
@@ -48,7 +49,7 @@ const AnsPrompt = (props) => {
 
     return (
         <div>
-            <div id="prompt">
+            <div className="prompt">
                 <div className="prompt-div">
                     <h1>Answer the Query</h1>
                 </div>

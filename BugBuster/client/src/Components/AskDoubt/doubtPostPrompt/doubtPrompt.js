@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import './doubtPrompt.css'
+// import './doubtPrompt.css'
 
 
 const DoubtPrompt = (props) => {
   const [ques, setQues] = useState("");
   const BASE_URL = process.env.REACT_APP_BASE_URL;
-  
+
 
 
 
@@ -28,23 +28,15 @@ const DoubtPrompt = (props) => {
 
   };
 
- 
+
 
   return (
-
     <div >
-      
       <div className="prompt">
-
         <div className="prompt-div">
           <h1>Ask Your Doubt</h1>
         </div>
 
-        
-        {/* <div className="prompt-div">
-          <h1>Answer the Query</h1>
-        </div> */}
-        
         <div className="prompt-div1">
           <ul>
             <h1>Tips for getting satisfactory answer quickly</h1>
@@ -55,30 +47,30 @@ const DoubtPrompt = (props) => {
             <li>Double check grammer and spelling</li>
           </ul>
         </div>
-        
+
 
         <div className="prompt-div2">
-       
+
           <input
             type="text"
             placeholder="ask your query here..."
             onChange={(e) => setQues(e.target.value)}
             value={ques}
           />
-      
+
         </div>
         <div className="prompt-div3">
           <button className="askdoubt-btn1" onClick={() => props.setPopUpDoubt(false)}>
             cancel
           </button>
-        
+
           <button className="askdoubt-btn2" onClick={AddQuestion}>
             Add question
           </button>
-       
+
         </div>
       </div>
-  
+
     </div>
 
   )

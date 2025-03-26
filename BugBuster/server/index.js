@@ -141,6 +141,18 @@ app.get("/getuniqueid/:id",async(req,resp)=>{
     resp.send({result:"admin not found"})
   }
 })
-
+app.post("/admin",async(req,resp)=>{
+  console.log(req.body.user)
+  try{
+    const data = await AdminModel.find();
+    if(data.user === req.body.user){
+      resp.send({message:"Done"});
+    }else{
+      resp.send({message:"user not found"})
+    }
+  }catch(err){
+    console.log("error occured: ",err)
+  }
+})
 
 app.listen(process.env.PORT);

@@ -7,12 +7,17 @@ nav h1{
     display: inline-block;
 }
 nav{
+    
     position:fixed;
+    top: 0;
+    left: 0;
+    padding: 0 20px;
+    /* height: 60px; */
     z-index: 1000;
 
-    display:inline-block;
+    /* display:inline-block; */
     width:100%;
-    background-color: white;
+    background-color: green;
     /* box-shadow: 0px 0px 5px; */
 }
 .btn{
