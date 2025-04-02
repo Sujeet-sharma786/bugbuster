@@ -280,7 +280,7 @@ const AskDoubt = () => {
           </div>
           <div className="right-container-contents">
             <h2>
-              <Link>HTML</Link>
+              <Link to="/advance-java">Advance Java</Link>
             </h2>
           </div>
           <div className="right-container-contents">

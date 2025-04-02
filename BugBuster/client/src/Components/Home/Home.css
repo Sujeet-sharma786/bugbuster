@@ -6,16 +6,18 @@
 }
 .home-bg{
     
+    
 }
 
 .section-1 {
-    transition-duration: 0.5s;
+    transition-duration: 0.5s;background-color: #229a7e;
     /*  */
     
     
     height: fit-content;
     padding:1px;
     z-index:2;
+    margin-top: 50px;
 }
 
 

@@ -13,6 +13,8 @@ import Navbar from "./Components/Navbar/navbar"
 import Footer from "./Components/Footer/footer"
 import Admin from "./Components/Admin/Admin.js";
 
+import AdvanceJava from "./Components/AdvanceJava/AdvanceJava.js";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -25,6 +27,7 @@ root.render(
         <Route path="/askyourdoubt" element={<AskDoubt />} />
         <Route path="/findcareer" element={<Career/>}/>
         <Route path="/admin" element={<Admin/>}/>
+        <Route path="/advance-java" element={<AdvanceJava/>}/>
       </Routes>
       {/* <Footer /> */}
     </Router>

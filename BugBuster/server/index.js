@@ -8,7 +8,7 @@ dotenv.config();
 
 const DoubtModel = require("./DB/doubtandsolution.js");
 const AdminModel = require("./DB/admins.js")
-
+const AdvanceJavaModel = require("./DB/advancejava.js");
 app.use(express.json());
 app.use(cors());
 
@@ -153,6 +153,23 @@ app.post("/admin",async(req,resp)=>{
   }catch(err){
     console.log("error occured: ",err)
   }
+})
+
+app.post("/advance-java",async(req,resp)=>{
+
+  let AdvanceJavaContent = new AdvanceJavaModel(req.body);
+  let result = await  AdvanceJavaContent.save();
+
+  resp.send(result);
+
+})
+
+app.get("/get-advance-java",async(req,resp)=>{
+  let result = await  AdvanceJavaModel.find();
+
+  resp.send(result);
+
+
 })
 
 app.listen(process.env.PORT);
