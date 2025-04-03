@@ -13,11 +13,6 @@ app.use(cors());
 
 //-------------------------------------------------------------------     ------------------------------------------------------------------------
 //OpenAi API model
-const OpenAI = require("openai");
-// const openai = new OpenAI({
-//   baseUrl:  'https://api.deepseek.com',
-//   apiKey:'sk-e3cad1e4110c49498b1b6ba890a68cef',
-// });
 
 app.post("/store-history", async (req, resp) => {
   
