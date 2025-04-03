@@ -5,12 +5,26 @@ const cors = require("cors");
 require("./DB/config");
 const dotenv = require("dotenv");
 dotenv.config();
-
 const DoubtModel = require("./DB/doubtandsolution.js");
 const AdminModel = require("./DB/admins.js")
 const AdvanceJavaModel = require("./DB/advancejava.js");
 app.use(express.json());
 app.use(cors());
+
+//-------------------------------------------------------------------     ------------------------------------------------------------------------
+//OpenAi API model
+const OpenAI = require("openai");
+// const openai = new OpenAI({
+//   baseUrl:  'https://api.deepseek.com',
+//   apiKey:'sk-e3cad1e4110c49498b1b6ba890a68cef',
+// });
+
+app.post("/store-history", async (req, resp) => {
+  
+});
+
+//-------------------------------------------------------------------     ------------------------------------------------------------------------
+
 
 app.get("/viewdoubts", async (req, resp) => {
   let data = await DoubtModel.find();
